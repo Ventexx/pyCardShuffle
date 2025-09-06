@@ -37,7 +37,16 @@ pyCardShuffle is a minimal text navigation tool. Paste text, split it with `---`
 
 ### Installation
 
-1. Clone the repository (or alternatively head to the Releases section and download the latest zip):
+You have two options:
+
+**Option 1: Download from Releases**
+
+- Head to the [Releases](../../releases) tab and download the latest ZIP for the web app.
+- For the desktop app, download the prebuilt package directly from the [Releases](../../releases) tab.
+
+**Option 2: Clone and Run from Source**
+
+1. Clone the repository:
 
 ```bash
 git clone <repo-url>
@@ -65,7 +74,7 @@ http://127.0.0.1:8992/
 
 ### Build Desktop App
 
-To package the desktop app:
+If you want to package the desktop app yourself instead of downloading a prebuilt release:
 
 ```bash
 # Linux / macOS
