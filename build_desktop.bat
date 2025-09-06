@@ -24,6 +24,7 @@ python -m pip install --upgrade pip setuptools wheel
 :: install dependencies
 echo Installing from requirements.txt...
 pip install -r requirements.txt
+pip install pyinstaller
 
 :: clean previous builds
 if exist build rmdir /s /q build
