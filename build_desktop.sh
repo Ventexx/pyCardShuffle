@@ -25,6 +25,7 @@ python -m pip install --upgrade pip setuptools wheel
 # install deps
 echo "Installing from requirements.txt..."
 pip install -r requirements.txt
+pip install pyinstaller
 
 # attempt to install system deps for webview on Debian/Ubuntu
 if command -v apt-get >/dev/null 2>&1; then
