@@ -1,2 +1,100 @@
 # pyCardShuffle
-pyCardShuffle is a lightweight tool to paste text, split it into pages, and navigate them with a simple web or desktop interface. Run locally in a browser or build as a desktop app with one command.
+
+A lightweight Flask app for splitting text into cards/pages and navigating them with a clean web or desktop interface.
+
+![Cover Image](cover.png)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Uninstall](#uninstall)
+- [Usage](#usage)
+- [License](#license)
+
+## Overview
+
+pyCardShuffle is a minimal text navigation tool. Paste text, split it with `---`, and move through the resulting cards/pages with next/previous controls. It can run locally in your browser or be built as a standalone desktop application with a single script.
+
+## Features
+
+- Insert text and auto-split into cards/pages with `---`.
+- Navigate forward and backward through pages.
+- Copy the full card text to clipboard with one click.
+- Clean, responsive interface with modal input.
+- Runs either as a local Flask web app or a desktop app via packaged build.
+- Self-contained setup with helper scripts for web and desktop modes.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.8 or newer installed.
+- pip available for installing Python packages.
+
+### Installation
+
+1. Clone the repository (or alternatively head to the Releases section and download the latest zip):
+
+```bash
+git clone <repo-url>
+cd <repo-directory>
+```
+
+2. Start the app using the provided helper scripts. These scripts handle virtual environment creation and requirements installation automatically.
+
+```bash
+# Linux / macOS
+chmod +x ./run_web.sh
+./run_web.sh
+```
+
+```bash
+# Windows
+run_web.bat
+```
+
+3. Open the app in your browser at:
+
+```
+http://127.0.0.1:8992/
+```
+
+### Build Desktop App
+
+To package the desktop app:
+
+```bash
+# Linux / macOS
+chmod +x ./build_desktop.sh
+./build_desktop.sh
+```
+
+```bash
+# Windows
+build_desktop.bat
+```
+
+### Uninstall
+
+To completely remove the app, delete the repository folder. No data is stored outside of it.
+
+---
+
+## Contribution Guidelines
+
+Your contributions are welcome!
+
+[Conventional Commits](https://www.conventionalcommits.org/)
+
+## Contact
+
+- **Maintainer**: Ventexx ([enquiry.kimventex@outlook.com](mailto\:enquiry.kimventex@outlook.com))
+
+# License
+
+pyCardShuffle © 2025 by Ventexx is licensed under CC BY-NC 4.0. To view a copy of this license, visit [https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+
