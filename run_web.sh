@@ -26,6 +26,7 @@ fi
 # install requirements
 echo "Installing from requirements.txt..."
 pip install -r requirements.txt
+pip install PyGObject==3.42.0 qtpy==2.3.0
 
 # Start app
 python app.py
