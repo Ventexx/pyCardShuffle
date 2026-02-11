@@ -49,8 +49,8 @@ You have two options:
 1. Clone the repository:
 
 ```bash
-git clone <repo-url>
-cd <repo-directory>
+git clone https://github.com/Ventexx/pyCardShuffle.git
+cd .\pyCardShuffle\
 ```
 
 2. Start the app using the provided helper scripts. These scripts handle virtual environment creation and requirements installation automatically.
