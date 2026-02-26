@@ -24,6 +24,7 @@ python -m pip install --upgrade pip
 :: install requirements
 echo Installing from requirements.txt...
 pip install -r requirements.txt
+pip install pywebview --no-deps
 
 :: start app
 python app.py

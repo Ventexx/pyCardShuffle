@@ -1,6 +1,7 @@
 from flask import Flask, render_template_string, request, session, redirect, url_for
+from flask_session import Session
 from pathlib import Path
-import os, secrets
+import os, secrets, shutil
 
 def get_or_create_secret_key(filename=None):
     env = os.environ.get("SECRET_KEY")
@@ -24,8 +25,32 @@ def get_or_create_secret_key(filename=None):
     except Exception:
         return secrets.token_urlsafe(32)
 
+def clear_session_folder(path="./.flask_session"):
+    if not os.path.exists(path):
+        return
+
+    for filename in os.listdir(path):
+        file_path = os.path.join(path, filename)
+
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(f"Failed to delete {file_path}: {e}")
+
 app = Flask(__name__)
 app.config["SECRET_KEY"] = get_or_create_secret_key()
+
+app.config["SESSION_TYPE"] = "filesystem"
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_USE_SIGNER"] = True
+app.config["SESSION_FILE_DIR"] = "./.flask_session"
+
+clear_session_folder(app.config["SESSION_FILE_DIR"])
+
+Session(app)
 
 HTML_TEMPLATE = '''
 <!DOCTYPE html>

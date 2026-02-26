@@ -1,27 +1,41 @@
+# Python cache
 __pycache__/
+*.py[cod]
 
+# Virtual environments
 venv/
+.venv/
+env/
 
+# Build artifacts
 build/
 dist/
-*.spec
-pip-wheel-metadata/
 *.egg-info/
 .eggs/
+pip-wheel-metadata/
 *.egg
+.flask_session/*
 
+# PyInstaller
+*.spec
+
+# Compiled binaries
 *.exe
 *.dll
 *.so
 *.dylib
 *.app
 
-*.env
+# Environment variables
+.env
+.env.*
 
+# IDEs
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
 
+# OS junk
 .DS_Store
 Thumbs.db

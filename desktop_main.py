@@ -29,4 +29,4 @@ if __name__ == "__main__":
         time.sleep(1)
 
     webview.create_window("Text Navigator", f"http://{HOST}:{PORT}")
-    webview.start()
+    webview.start(gui="edgechromium")
